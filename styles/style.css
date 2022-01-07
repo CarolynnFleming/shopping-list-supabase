@@ -110,9 +110,12 @@ footer {
   }
 
 #logout {
+    background-color: limegreen;
+    color: mediumpurple;
     position: fixed;
     right: 20px;
     top: 90px;
+    border-radius: 10px;
 }
 
 .auth-main {
@@ -135,9 +138,11 @@ footer {
 }
 
 .delete {
-    background-color: crimson;
-  margin: 20px;
-    cursor: pointer;
+    background-color: limegreen;
+  cursor: pointer;
+    color: mediumpurple;
+    border-radius: 10px;
+    font-size: 1.5rem;
 
 }
 
@@ -148,12 +153,31 @@ button, .un-bought {
 .bought {
     cursor:pointer;
     text-decoration: line-through;
-    /* transform: rotateY(180deg); */
-    background-color: darkturquoise;
+    transform: rotateY(180deg);
+    background-color: lime;
 }
 
 
 
 label {
     display: block;
+}
+
+.list{
+    border: lime 2px solid;
+    background-color: mediumpurple;
+    border-radius: 10px;
+    font-size: 2.5rem;
+}
+
+.add {
+    background-color: limegreen;
+    color: mediumpurple;
+    margin:20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+input {
+    border-radius: 10px;
 }
