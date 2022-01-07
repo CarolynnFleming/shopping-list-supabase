@@ -31,7 +31,9 @@ listForm.addEventListener('submit', async(e) => {
 });
 
 deleteButton.addEventListener('click', async() => {
+    await deleteAllListItems();
 
+    await displayShoppingList();
 });
 
 async function displayShoppingList() {
@@ -39,5 +41,5 @@ async function displayShoppingList() {
 } 
 
 window.addEventListener('load', async() => {
-
+    await displayShoppingList();
 });
