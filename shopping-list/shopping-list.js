@@ -48,10 +48,11 @@ async function displayShoppingList() {
         if (item.bought === false) {
             itemEl.addEventListener('click', async() => {
                 await buyListItem(item.id);
-                displayShoppingList();
+                await displayShoppingList();
             });
-            listEl.append(itemEl);
-        }   
+            
+        } 
+        listEl.append(itemEl);  
     }
 } 
 
