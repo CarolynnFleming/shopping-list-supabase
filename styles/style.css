@@ -133,3 +133,27 @@ footer {
 .auth-container button {
     margin: 10px;
 }
+
+.delete {
+    background-color: crimson;
+  margin: 20px;
+    cursor: pointer;
+
+}
+
+button, .un-bought {
+    cursor: pointer;
+}
+
+.bought {
+    cursor:pointer;
+    text-decoration: line-through;
+    /* transform: rotateY(180deg); */
+    background-color: darkturquoise;
+}
+
+
+
+label {
+    display: block;
+}
