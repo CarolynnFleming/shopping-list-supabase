@@ -1,5 +1,7 @@
 import { checkAuth, logout, createListItem, getListItem, buyListItem, deleteAllListItems } from '../fetch-utils.js';
 
+import { renderItem } from '../render-utils.js';
+
 checkAuth();
 
 const logoutButton = document.getElementById('logout');
@@ -37,7 +39,20 @@ deleteButton.addEventListener('click', async() => {
 });
 
 async function displayShoppingList() {
+    const list = await getListItem();
 
+    listEl.textContent = '';
+
+    for (let item of list) {
+        const itemEl = renderItem(item);
+        if (item.bought === false) {
+            itemEl.addEventListener('click', async() => {
+                await buyListItem(item.id);
+                displayShoppingList();
+            });
+            listEl.append(itemEl);
+        }   
+    }
 } 
 
 window.addEventListener('load', async() => {

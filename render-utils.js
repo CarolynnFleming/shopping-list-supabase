@@ -1,5 +1,3 @@
-import { buyListItem } from "./fetch-utils";
-
 export function renderItem(item){
     const itemDiv = document.createElement('div');
     const itemsEl = document.createElement('p');
